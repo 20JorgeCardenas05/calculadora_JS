@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Calculadora Sencilla</title>
 </head>
 <body>
     <h1>Calculadora Sencilla</h1>
-    <form action="" id="formulario" method="get">
-        <label for="n1">Número 1</label>
-        <input name="n1" type="text" placeholder="Ingresa el número 1" id="n1">
+    
+    <div id="calculadora">
+        <div id="calc">
+            <form action="" id="formulario" method="get">
+                <label for="n1" id="ln1">Número 1</label>
+                <input name="n1" type="text" placeholder="Ingresa el número 1" id="n1">
+                <br>
+                <label for="n2" id="ln2">Número 2</label>
+                <input name="n2" type="text" placeholder="Ingresa el número 2" id="n2">
+            </form>
+            <div id="botones">
+                <button onclick="sumar()" id="su">+</button>
+                <button onclick="restar()" id="re">-</button>
+                <button onclick="multiplicar()" id="mu">× </button>
+                <button onclick="dividir()" id="di">÷</button>
+                <button type="submit" id="borrrar" onclick="borrar()">A  C</button>
+            </div>
+            <div id="resultados">
+                <h4>Resultados:</h4>
+                <p id="sumaa"></p>
+                <p id="restaa"></p>
+                <p id="multii"></p>
+                <p id="divv" ></p>
+            </div>
+        </div>
+    </div>
+    <button class="botonclick" id="">Dame click</button>
+    <div id="textos">
+        <form action="" id="textoo" method="get">
+            <input type="text" id="texto">
+        </form>
+        <button id="agregar">Agregar</button>
         <br>
-        <label for="n2">Número 2</label>
-        <input name="n2" type="text" placeholder="Ingresa el número 2" id="n2">
-        <br>   
-        <br>
-    </form>
-    <button onclick="sumar()">Suma</button>
-    <button onclick="restar()">Resta</button>
-    <button onclick="multiplicar()">Multiplicación</button>
-    <button onclick="dividir()">División</button>
-    <button type="submit" id="borrar" onclick="borrar()">Limpiar</button>
-    <p id="sumaa">
-    </p>
-    <p id="restaa">
-    </p>
-    <p id="multii">
-    </p>
-    <p id="divv" >
-    </p>
+        <textarea name="" id="areatexto" cols="30" rows="10"></textarea>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
